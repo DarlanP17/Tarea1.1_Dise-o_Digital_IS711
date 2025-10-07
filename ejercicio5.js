@@ -7,18 +7,18 @@ const elementos = [
     { id: 2, nombre: 'B' },
     { id: 1, nombre: 'A' }
 ];
-
-function eliminarDuplicados(arreglo, propiedad) {
-    const vistos = new Set();
+    
+const eliminarDuplicados = (arreglo, propiedad) => {
+    const vistos = new Set()
     return arreglo.filter(elemento => {
-        const valor = elemento[propiedad];
+        const valor = elemento[propiedad]
         if (vistos.has(valor)) {
-            return false; // Ya existe, eliminar duplicado
+            return false // Si ya existe se elimina
         }
-        vistos.add(valor);
-        return true; // Primera vez que lo vemos, mantenerlo
+        vistos.add(valor)
+        return true // Si es nuevo se mantiene
     });
 }
 
-const resultado = eliminarDuplicados(elementos, 'id');
-console.log(resultado);
+const resultado = eliminarDuplicados(elementos, 'id')
+console.log(resultado)

@@ -8,7 +8,7 @@ const datos = [
     { categoria: 'verdura', nombre: 'lechuga' }
 ]
 
-function agruparPorPropiedad(datos, categoria) {
+const agruparPorPropiedad = (datos, categoria) => {
     return datos.reduce((grupo, elemento) => {
         const clave = elemento[categoria]
         grupo[clave].push(elemento)

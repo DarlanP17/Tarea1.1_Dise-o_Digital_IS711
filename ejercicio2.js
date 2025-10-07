@@ -11,7 +11,7 @@ const usuarios = {
     4: { id: 4, nombre: 'Ana' }
 }
 
-function obtenerUsuario(id) {
+const obtenerUsuario = (id) => {
     return new Promise((resolve, reject) => {
         // Simular una llamada asíncrona con setTimeout
         setTimeout(() => {

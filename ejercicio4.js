@@ -4,7 +4,7 @@ nombre y la edad aumentada en 1 año, sin modificar el objeto original. */
 
 const persona = { nombre: 'Luis', edad: 30 }
 
-function modificarPersona(persona, nuevoNombre) {
+const modificarPersona = (persona, nuevoNombre) => {
     return {
         ...persona,
         nombre: nuevoNombre,
